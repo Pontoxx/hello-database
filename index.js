@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 
 const router = require('./routes/api/user');
 
+const cors     = require('cors');
+
 const port = process.env.PORT        || 3000;
 const db   = process.env.MONGODB_URI || 'mongodb://localhost/hellodb';
 
@@ -18,6 +20,12 @@ mongoose
   .catch(err => console.error(`Connection error ${err}`));
 
 app.use('/api', router);
+
+app.use(cors());
+
+app.get('/', (req, res) => {
+  res.send('Hello database');
+});
 
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
