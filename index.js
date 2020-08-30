@@ -23,9 +23,7 @@ app.use('/api', router);
 
 app.use(cors());
 
-app.get('/', (req, res) => {
-  res.send('Hello database');
-});
+
 
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
