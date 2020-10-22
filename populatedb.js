@@ -2,8 +2,7 @@ const mongoose = require('mongoose');
 
 const User = require('./models/User');
 
-const db = 'mongodb+srv://hellodb:matias456@cluster0.o4qlz.mongodb.net/<dbname>?retryWrites=true&w=majority';
-
+const db = "mongodb+srv://hellodb:matias456@cluster0.4qcuc.mongodb.net/hellodb?retryWrites=true&w=majority"
 const users = [
   {
     id: 1,
